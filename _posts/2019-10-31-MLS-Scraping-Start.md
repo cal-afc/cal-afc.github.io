@@ -79,28 +79,28 @@ mls <- tm_map(mls, toSpace, "\\|")
 
 inspect(mls)
 
-# Convert the text to lower case
+#Convert the text to lower case
 mls <- tm_map(mls, content_transformer(tolower))
 
-# Remove numbers
+#Remove numbers
 mls <- tm_map(mls, removeNumbers)
 
-# Remove english common stopwords
+#Remove english common stopwords
 mls <- tm_map(mls, removeWords, stopwords("english"))
 
-# Remove other stop words
-# specify stopwords as a character vector
+#Remove other stop words
+#specify stopwords as a character vector
 mls <- tm_map(mls, removeWords, c("week", "last", "next", "high", "low", "previous"))
 
-# Remove punctuation
+#Remove punctuation
 mls <- tm_map(mls, removePunctuation)
 
-# Eliminate extra white spaces
+#Eliminate extra white spaces
 mls <- tm_map(mls, stripWhitespace)
 
-# Text stemming
-# Takes words down to common roots
-# mls <- tm_map(mls, stemDocument)
+#Text stemming
+#Takes words down to common roots
+#mls <- tm_map(mls, stemDocument)
 
 dtm <- TermDocumentMatrix(mls)
 m <- as.matrix(dtm)
