@@ -25,7 +25,7 @@ date: 2019-10-31
  
  The generated wordcloud from this analysis is included below:
  
- [!Image](https://github.com/cal-afc/cal-afc.github.io/blob/master/images/MLSwordcloud.png?raw=true)
+ ![Image](https://github.com/cal-afc/cal-afc.github.io/blob/master/images/MLSwordcloud.png?raw=true)
  
  The next step in this project involves taking the text for specific teams, and creating individual files for specific teams, where I can use R's sentiment analysis packages in order to see which team has the most positive or negative news associated with it.
  Along with team specific text, I also plan to look at the text for MLS Soccer's analysts, and see if some have more negative writing styles than others.
